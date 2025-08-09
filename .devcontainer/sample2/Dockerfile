@@ -16,10 +16,11 @@ RUN groupadd --gid ${USER_GID} ${USER_GROUP_NAME} \
     && chmod 0440 /etc/sudoers.d/${USER_GROUP_NAME}
 
 ARG JAVA_VERSION=8.0.462.fx-zulu
+ARG MAVEN_VERSION=3.9.11
 ARG SDKMAN_DIR=/home/vscode/.sdkman
 
 USER vscode
 RUN curl -s "https://get.sdkman.io" | bash \
     && source ${SDKMAN_DIR}/bin/sdkman-init.sh \
-    && sdk install java ${JAVA_VERSION}
-
+    && sdk install java ${JAVA_VERSION} \
+    && sdk install maven ${MAVEN_VERSION}
