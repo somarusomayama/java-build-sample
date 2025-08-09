@@ -2,9 +2,19 @@ services:
   java-service-sample-1:
     container_name: java-1
     build:
-      context: ./docker/api
+      context: sample1/
     tty: true
     volumes:
       - ../:/home/vscode/workspace:cache
     ports:
       - 8080:8080
+
+  java-service-sample-2:
+    container_name: java-2
+    build:
+      context: sample2/
+    tty: true
+    volumes:
+      - ../:/home/vscode/workspace:cache
+    ports:
+      - 8081:8081

@@ -1,0 +1,15 @@
+{
+    "name": "Sample2 Dev Container",
+    "dockerComposeFile": ["../docker-compose.yml"],
+    "service": "java-service-sample-2",
+    "workspaceFolder": "/home/vscode/workspace",
+    "shutdownAction": "stopCompose",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vscjava.vscode-java-pack"
+            ]
+        }
+    },
+    "remoteUser": "vscode"
+}
