@@ -1,7 +1,7 @@
 {
-    "name": "My Dev Container",
-    "dockerComposeFile": "docker-compose.yml",
-    "service": "java-service-sample-1",
+    "name": "Sample1 Dev Contaeiner",
+    "dockerComposeFile": ["../docker-compose.yml"],
+    "service": "java-service-sample-2",
     "workspaceFolder": "/home/vscode/workspace",
     "shutdownAction": "stopCompose",
     "customizations": {
