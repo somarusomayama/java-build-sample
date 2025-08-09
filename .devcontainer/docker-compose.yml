@@ -1,0 +1,10 @@
+services:
+  java-service-sample-1:
+    container_name: java-1
+    build:
+      context: ./docker/api
+    tty: true
+    volumes:
+      - ../:/home/vscode/workspace:cache
+    ports:
+      - 8080:8080
