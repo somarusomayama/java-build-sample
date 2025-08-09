@@ -5,7 +5,7 @@ services:
       context: sample1/
     tty: true
     volumes:
-      - ../:/home/vscode/workspace:cache
+      - ./sample1:/home/vscode/workspace/sample1:cached
     ports:
       - 8080:8080
 
@@ -15,6 +15,6 @@ services:
       context: sample2/
     tty: true
     volumes:
-      - ../:/home/vscode/workspace:cache
+      - ./sample2:/home/vscode/workspace/sample2:cached
     ports:
       - 8081:8081
